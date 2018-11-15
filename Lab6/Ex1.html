@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <script>
+      var number = 0;
+      function reverseNumber(number) {
+        number = number + "";
+        return number
+          .split("")
+          .reverse()
+          .join("");
+      }
+
+      console.log(reverseNumber(12345));
+      console.log(reverseNumber("abcde"));
+    </script>
+  </body>
+</html>

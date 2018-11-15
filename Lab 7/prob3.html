@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <script>
+      time();
+
+      function time() {
+        try {
+          setTimeout(function() {
+            throw new Error("example");
+          }, 1000);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    </script>
+  </body>
+</html>
