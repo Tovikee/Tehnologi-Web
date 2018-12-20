@@ -32,7 +32,7 @@ io.on('connection', function(socket){
  	 });
 
 	  con.query("SELECT * FROM msg", function (err, result, fields) {
-   		 if (err) throw err;
+   		 if (err) {throw err;}
     		console.log(result);
     		io.emit('chat', result);
   		});
