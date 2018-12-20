@@ -13,7 +13,7 @@ var con = mysql.createConnection({
 });
 
 con.connect(function(err) {
-  if (err) throw err;
+  if (err) {throw err;}
   console.log("Connected!");
 });
 
@@ -27,7 +27,7 @@ io.on('connection', function(socket){
 	var sql = "INSERT INTO msg(id, message) VALUES (?,?)";
 
 	  con.query(sql, ['1',msg],function (err, result) {
-	    if (err) throw err;
+	    if (err) {throw err;}
 	    console.log("1 record inserted");
  	 });
 
